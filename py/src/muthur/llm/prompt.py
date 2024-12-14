@@ -19,7 +19,7 @@ def files_to_markdown(files: List[str], relative_root: str = None) -> Result[str
                 )
 
                 content = file_content.read()
-                contents.append(f"""```{file_name}\n{content}\n```""")
+                contents.append(f"""{file_name}\n```{content}\n```""")
 
         content = f"## Files\n\n{'\n\n'.join(contents)}"
         return Result.ok(content)
